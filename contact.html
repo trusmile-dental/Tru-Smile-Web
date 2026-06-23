@@ -89,6 +89,8 @@
               <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
             </div>
             <!-- Success / error messages shown here by JS -->
+            <!-- Honeypot — hidden from users, do not remove -->
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
             <div class="form-msg" role="alert" aria-live="polite"></div>
             <div class="form-actions">
               <button type="button" class="btn-cancel">CANCEL</button>
