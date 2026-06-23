@@ -138,6 +138,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // ── EMAIL SUBJECT injected as hidden field ──────────
       data.set('_subject', `Website Ticket Inquiry - ${clinicName}`);
+      data.set('_replyto', contactForm.querySelector('[name="email"]').value.trim()); // ← add this
 
       try {
         const res = await fetch('https://formspree.io/f/mqevkylb', {
@@ -187,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
       // ── EMAIL SUBJECT ───────────────────────────────────
       data.set('_subject', `Website Case Submission - ${clinicName}`);
+      data.set('_replyto', caseForm.querySelector('[name="email"]').value.trim()); // ← add this
 
       // Append selected teeth from hidden inputs
       const ut = document.getElementById('upper_teeth');
